@@ -1,10 +1,15 @@
-// @import '../src/assets/styles/variables.scss'; 
-
+// @import '/src/assets/styles/variables.scss';
+$pink-hight: #FF92C2;
+$paradisepink: #DA4167;
 span {
     font-size: 20px;
     font-weight: bold;
 }
 
-.nav-color{
-    //background: $pink-normal;
+.nav-color {
+    background: $pink-hight;
+}
+
+.text-color {
+    color: $paradisepink;
 }
