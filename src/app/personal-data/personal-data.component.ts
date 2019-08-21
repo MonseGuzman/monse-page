@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-personal-data',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalDataComponent implements OnInit {
 
-  constructor() { }
+  filmFavorite: Array<any>;
+
+  constructor( private firestoreService: FirebaseService) { }
 
   ngOnInit() {
+    this.firestoreService.getFilmsFavorite()
+    .subscribe(dataSnapshot => {
+      this.filmFavorite = dataSnapshot;
+      });
   }
 
 }

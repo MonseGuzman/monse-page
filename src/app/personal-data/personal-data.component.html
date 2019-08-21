@@ -9,13 +9,16 @@
             <hr>
             <p>I'm a girl develop, Yes, I'm a girl</p>
 
-            <ul>
-                <li>I enjoy programming.</li>
-                <li>I hated css But, now...
-                    <h1 class="no">NO</h1>
-                    it's fun!
-                </li>
-            </ul>
+            <div class="content">
+                <ol class="is-upper-alpha">
+                    <li>I enjoy programming.</li>
+                    <li>I hated css But, now...
+                        <h1 class="no">NO</h1>
+                        it's fun!
+                    </li>
+                    <li>I LOVE romance and action movies</li>
+                </ol>
+            </div>
 
             <h3 class="title is-3">MY FAVORITE SINGERS</h3>
             <hr>
@@ -94,7 +97,25 @@
         </div>
 
         <div class="column is-6">
-            <p>It will be cool that here, it's my pictures on instagram</p>
+            <p>And this... is my favorite movies, series, cartoons and other things than I LOVE SO MUCH</p>
+
+            <div class="box" *ngFor="let item of filmFavorite">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img [src]="item.payload.doc.data().img" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>{{ item.payload.doc.data().name }}</strong>
+                                <br> {{ item.payload.doc.data().description }}
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
 
     </div>
