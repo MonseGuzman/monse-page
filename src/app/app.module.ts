@@ -14,6 +14,7 @@ import { AboutmePageComponent } from './aboutme-page/aboutme-page.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
+import { SingersComponentComponent } from './singers-component/singers-component.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { environment } from 'src/environments/environment';
     NavBarMeComponent,
     MyjobsPageComponent,
     AboutmePageComponent,
+    SingersComponentComponent,
   ],
   imports: [
     BrowserModule,
