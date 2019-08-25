@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 
+import { FilmFavorite } from '../models/film-favorite/film-favorite';
+
 @Component({
   selector: 'app-personal-data',
   templateUrl: './personal-data.component.html',
@@ -8,15 +10,20 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class PersonalDataComponent implements OnInit {
 
-  filmFavorite: Array<any>;
+  filmFavorite: FilmFavorite[] = new Array();
 
   constructor( private firestoreService: FirebaseService) { }
 
   ngOnInit() {
-    this.firestoreService.getFilmsFavorite()
-    .subscribe(dataSnapshot => {
-      this.filmFavorite = dataSnapshot;
+    // all films
+    this.firestoreService.getFilmsFavorite().subscribe((dataSnapshot) => {
+      dataSnapshot.forEach((data: any) => {
+        this.filmFavorite.push(
+          new FilmFavorite(data.payload.doc.id, data.payload.doc.data().name, data.payload.doc.data().description,
+          data.payload.doc.data().img)
+        );
       });
+    });
   }
 
 }

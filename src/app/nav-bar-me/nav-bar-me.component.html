@@ -1,9 +1,15 @@
-<nav class="navbar nav-color" role="navigation" aria-label="main navigation">
+<nav class="navbar is-violet" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a href="" class="navbar-item text-color">
-            <i class="far fa-laugh-beam"></i>
-            <span> Monse</span>
+        <a href="" class="navbar-item">
+            <span>
+                <i class="far fa-laugh-beam"></i>
+                Monse
+            </span>
         </a>
     </div>
+
+    <nav mat-tab-nav-bar class="tabs is right">
+        <span mat-tab-link [ngClass]="{'is-active': true}" *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" routerLinkActive="active" class="tabs-color">{{ link.label }}</span>
+    </nav>
 
 </nav>

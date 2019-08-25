@@ -1,15 +1,22 @@
-// @import '/src/assets/styles/variables.scss';
-$pink-hight: #FF92C2;
-$paradisepink: #DA4167;
-span {
-    font-size: 20px;
-    font-weight: bold;
+// @import '/src/assets/styles/colors.scss';
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+$violet: #5603AD;
+$ube: #8367C7;
+$magic-mint: #B3E9C7;
+$tea-green: #C2F8CB;
+$white-smoke: #F7F7F7;
+$pink-normal: #F28CCE;
+.is-violet {
+    background: $violet;
+    a {
+        font-size: 20px;
+        font-weight: bold;
+        color: $white-smoke;
+        font-family: 'Lexend Deca', sans-serif;
+    }
 }
 
-.nav-color {
-    background: $pink-hight;
-}
-
-.text-color {
-    color: $paradisepink;
+.tabs-color {
+    color: $white-smoke;
+    font-family: 'Lexend Deca', sans-serif;
 }

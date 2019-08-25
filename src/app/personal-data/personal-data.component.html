@@ -1,101 +1,29 @@
 <div class="container">
-    <div class="columns">
-        <div class="column is-6">
-            <h1>H E L L O
-                <i class="far fa-grin-tongue-wink"></i>
-            </h1>
 
-            <h3 class="title is-3">ABOUT ME</h3>
+    <div class="columns">
+        <div class="column is-12">
+            <h3 class="title is-3 space-title">ABOUT ME
+                <i class="far fa-grin-tongue-wink"></i>
+            </h3>
             <hr>
+
             <p>I'm a girl develop, Yes, I'm a girl</p>
 
             <div class="content">
                 <ol class="is-upper-alpha">
                     <li>I enjoy programming.</li>
                     <li>I hated css But, now...
-                        <h1 class="no">NO</h1>
-                        it's fun!
+                        <h1 class="no">NO </h1>it's fun!
                     </li>
                     <li>I LOVE romance and action movies</li>
                 </ol>
             </div>
-
-            <h3 class="title is-3">MY FAVORITE SINGERS</h3>
-            <hr>
-
-            <div class="columns">
-                <div class="column is-4">
-                    <div class="column has-text-centered">
-                        <h4 class="title is-4">Camila Cabello</h4>
-                    </div>
-
-                    <div class="column is-center-img">
-                        <figure class="image is-128x128">
-                            <img class="is-rounded" src="https://66.media.tumblr.com/45dceeaa63a62135178d386c91c5e099/tumblr_pfspegJxeX1xa2uxyo2_400.png">
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="column is-center-img">
-                        <figure class="image is-128x128">
-                            <img class="is-rounded" src="https://66.media.tumblr.com/7d3b4774bb40d1d2e27afae56b598e06/tumblr_pvocndhj891siv8u7o5_640.jpg">
-                        </figure>
-                    </div>
-
-                    <div class="column">
-                        <h4 class="title is-4 has-text-centered">Selena Gomez</h4>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="column">
-                        <h4 class="title is-4 has-text-centered">Taylor Swift</h4>
-                    </div>
-                    <div class="column is-center-img">
-                        <figure class="image is-128x128">
-                            <img class="is-rounded" src="https://66.media.tumblr.com/209c23ae5f0eb8c04a4ab631f01407a2/906f5cd815b634c7-01/s640x960/5c60dc54f8b68058f860f743480bc0dd24208503.jpg">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-
-            <div class="columns">
-                <div class="column is-4">
-                    <div class="column is-center-img">
-                        <figure class="image is-128x128">
-                            <img class="is-rounded" src="https://66.media.tumblr.com/b26cc18ac7a781f56a5e0da5d9d93ec1/tumblr_pv3wygvcrV1wsf97ro6_500.png">
-                        </figure>
-                    </div>
-                    <div class="column">
-                        <h4 class="title is-4 has-text-centered">Shawn Mendes</h4>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="column">
-                        <h4 class="title is-4 has-text-centered">Ed Sheeran</h4>
-                    </div>
-                    <div class="column is-center-img">
-                        <figure class="image is-128x128">
-                            <img class="is-rounded" src="https://66.media.tumblr.com/8cc088e400d73d87265929ad0cef398d/tumblr_pcx0zjGJNW1w25ynio7_1280.jpg">
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="column is-center-img">
-                        <figure class="image is-128x128">
-                            <img class="is-rounded" src="https://66.media.tumblr.com/683c879eb7d0afe22e5b5d2eca16530d/tumblr_psoo5nlvJR1xm314no1_1280.png">
-                        </figure>
-                    </div>
-                    <div class="column">
-                        <h4 class="title is-4 has-text-centered">Jonas Brothers</h4>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
 
+    <app-singers-component></app-singers-component>
+
+    <div class="columns">
         <div class="column is-6">
             <p>And this... is my favorite movies, series, cartoons and other things than I LOVE SO MUCH</p>
 
@@ -103,14 +31,14 @@
                 <article class="media">
                     <div class="media-left">
                         <figure class="image is-64x64">
-                            <img [src]="item.payload.doc.data().img" alt="Image">
+                            <img [src]="item.img" alt="Image">
                         </figure>
                     </div>
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>{{ item.payload.doc.data().name }}</strong>
-                                <br> {{ item.payload.doc.data().description }}
+                                <strong>{{ item.name }}</strong>
+                                <br> {{ item.description }}
                             </p>
                         </div>
                     </div>
@@ -118,5 +46,19 @@
             </div>
         </div>
 
+        <div class="column is-6">
+            <p>And this... is my favorite movies, series, cartoons and other things than I LOVE SO MUCH</p>
+
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">
+                        “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+                    </p>
+                    <p class="subtitle">
+                        Jeff Atwood
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,9 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-nav-bar-me></app-nav-bar-me>
 
-<div id="navDiv">
-    <nav mat-tab-nav-bar class="tabs is-medium is-centered is-boxed nav-color">
-        <a mat-tab-link [ngClass]="{'is-active': true}" *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" routerLinkActive="active">{{ link.label }}</a>
-    </nav>
-</div>
 <router-outlet></router-outlet>
