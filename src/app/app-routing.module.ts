@@ -4,9 +4,11 @@ import { CommonModule } from '@angular/common';
 
 import { MyjobsPageComponent } from './myjobs-page/myjobs-page.component';
 import { AboutmePageComponent } from './aboutme-page/aboutme-page.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/aboutme', pathMatch: 'full'},
+  // { path: '', redirectTo: '/', pathMatch: 'full'},
+  { path: '', component: HomeComponentComponent },
   { path: 'aboutme', component: AboutmePageComponent},
   { path: 'jobs', component: MyjobsPageComponent }
 ];
