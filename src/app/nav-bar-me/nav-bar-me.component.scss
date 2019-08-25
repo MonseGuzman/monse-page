@@ -1,11 +1,5 @@
-// @import '/src/assets/styles/colors.scss';
+@import "./src/styles.scss";
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
-$violet: #5603AD;
-$ube: #8367C7;
-$magic-mint: #B3E9C7;
-$tea-green: #C2F8CB;
-$white-smoke: #F7F7F7;
-$pink-normal: #F28CCE;
 .is-violet {
     background: $violet;
     a {
