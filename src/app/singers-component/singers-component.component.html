@@ -1,0 +1,61 @@
+<div class="columns">
+    <div class="column is-12">
+        <h3 class="title is-3">MY FAVORITE SINGERS</h3>
+        <hr>
+        <div class="columns">
+            <div *ngFor="let item of singerFavorite; let i=index">
+                <div *ngIf="firstColumn(i)">
+                    <div class="column is-4" *ngIf="item.position">
+                        <div class="column has-text-centered">
+                            <h4 class="title is-4">{{item.name}}</h4>
+                        </div>
+
+                        <div class="column is-center-img">
+                            <figure class="image is-128x128">
+                                <img class="is-rounded" [src]="item.photo">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="column is-4" *ngIf="!item.position">
+                        <div class="column is-center-img">
+                            <figure class="image is-128x128">
+                                <img class="is-rounded" [src]="item.photo">
+                            </figure>
+                        </div>
+
+                        <div class="column">
+                            <h4 class="title is-4 has-text-centered">{{item.name}}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="secondColumn(i)">
+                    <div class="column is-4" *ngIf="item.position">
+                        <div class="column has-text-centered">
+                            <h4 class="title is-4">{{item.name}}</h4>
+                        </div>
+
+                        <div class="column is-center-img">
+                            <figure class="image is-128x128">
+                                <img class="is-rounded" [src]="item.photo">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="column is-4" *ngIf="!item.position">
+                        <div class="column is-center-img">
+                            <figure class="image is-128x128">
+                                <img class="is-rounded" [src]="item.photo">
+                            </figure>
+                        </div>
+
+                        <div class="column">
+                            <h4 class="title is-4 has-text-centered">{{item.name}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

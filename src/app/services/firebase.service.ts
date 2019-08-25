@@ -11,4 +11,8 @@ export class FirebaseService {
   getFilmsFavorite() {
     return this.firestore.collection('films-favorite').snapshotChanges();
   }
+
+  getSingersFavorite() {
+    return this.firestore.collection('singer').snapshotChanges();
+  }
 }
